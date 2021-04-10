@@ -1,0 +1,47 @@
+<h1>This is parent. and is working</h1>
+<!-- {{ firstName }} : {{ myMarks }} : {{ getDetails() }} -->
+
+<!-- Not work -->
+<!-- {{data}} -->
+
+<br />
+
+<!-- {{studentList}} -->
+<!-- structural directive -->
+
+
+<!-- <ng-container *ngFor="let student of studentList; let i = index">
+    {{i + 1}} {{ student.firstName }}: {{student.lastName}}:: {{student.marks}}
+</ng-container> -->
+
+<hr>
+<div *ngFor="let student of studentList; let i = index">
+    <!-- <div *ngIf="student.marks > 39">
+        {{i + 1}} {{ student.firstName }}: {{student.lastName}}:: {{student.marks}}
+    </div> -->
+    <!-- <div *ngIf="student.marks < 40">
+        {{i + 1}} {{ student.firstName }}: {{student.lastName}}:: {{student.marks}}
+    </div> -->
+</div>
+
+
+
+<hr />
+
+<h2></h2>
+
+<!-- interpolation -  data binding -->
+
+<!-- in the parent component view pass the data to the input variable -->
+<app-child [childFirstName]="firstName" ></app-child>
+
+
+<!-- 
+Built-in directives
+Parent-Child 
+service, depen I
+Built in Pipes
+Custom Pipes
+Custom Dire
+Forms
+HTTP -->
