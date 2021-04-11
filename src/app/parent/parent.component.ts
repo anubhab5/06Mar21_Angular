@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MySvcService } from '../my-svc.service';
+import { Svc2Service } from '../svc2.service';
 import { IStudent } from './student';
 
 @Component({
@@ -7,16 +9,19 @@ import { IStudent } from './student';
   // template: `
   //   <h1>This is parent. and is working from inside the ts file</h1>
   // `,
-  styleUrls: ['./parent.component.css']
+  styleUrls: ['./parent.component.css'],
+  providers: []
 })
 export class ParentComponent {
+
+  product;
 
   firstName: string = "JOHN SNOW";
   myMarks: number = 12;
   isPassed: boolean = true;
 
   // 39 > 
-  studentList : Array<IStudent> = [
+  studentList: Array<IStudent> = [
     {
       firstName: "Jack",
       lastName: "j",
@@ -39,7 +44,7 @@ export class ParentComponent {
     }
   ];
 
-  constructor() {
+  constructor(private mySvc: MySvcService) {
     console.log("Constructor is called");
   }
 
@@ -51,6 +56,15 @@ export class ParentComponent {
 
   sayHello() {
     return "In Hello";
+  }
+
+  childEvntEmitterListener(data) {
+    this.product = data;
+  }
+
+  buttonClicked() {
+    // this.mySvc.getMyAge();
+    alert(this.mySvc.getMyAge());
   }
 
 }

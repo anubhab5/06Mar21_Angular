@@ -1,0 +1,34 @@
+<p>sibling works!</p>
+<button (click)="quickCall()"> service demo</button>
+<br>
+<!-- {{toUpperCase('jack')}}
+{{toUpperCase('jill')}} -->
+
+<!-- uppercase and lowercase pipe -->
+{{firstName | uppercase}}
+{{lastName | lowercase}}
+<hr>
+<!-- date time pipe -->
+<!-- {{currentDate | date : 'fullDate'}} -->
+<!-- {{currentDate | date : 'shortDate'}} -->
+<!-- {{currentDate | date : 'shortTime'}} -->
+<!-- {{currentDate | date : 'longTime'}} -->
+<!-- {{currentDate | date : 'd/M/y'}} -->
+<!-- {{currentDate | date : 'dd/MMM/yy'}} -->
+
+<hr>
+<!-- currency pipe -->
+<!-- {{mySalary | currency : "AUD"}} -->
+<!-- {{mySalary | currency : "INR"}} -->
+
+<!-- decimal pipe -->
+<!-- minimal number of integer digits -->
+<!-- {{mySalary | number: '4.1-3'}} -->
+
+<!-- json pipe -->
+<!-- {{studentList | json}} -->
+
+<!-- slice pipe -->
+<!-- {{sliceDemo | slice: 1:4}} -->
+
+{{cartValue | discountpipe : ''}}
