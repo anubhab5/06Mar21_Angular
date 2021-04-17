@@ -8,6 +8,9 @@ import { ChildComponent } from './child/child.component';
 import { SiblingComponent } from './sibling/sibling.component';
 import { Svc2Service } from './svc2.service';
 import { MypipePipe } from './mypipe.pipe';
+import { HighlightDirective } from './highlight.directive';
+import { FormDemoComponent } from './form-demo/form-demo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { MypipePipe } from './mypipe.pipe';
     ParentComponent,
     ChildComponent,
     SiblingComponent,
-    MypipePipe
+    MypipePipe,
+    HighlightDirective,
+    FormDemoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule // add reactive forms module in imports array
   ],
   providers: [],
   bootstrap: [AppComponent]

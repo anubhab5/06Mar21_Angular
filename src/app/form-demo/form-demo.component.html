@@ -1,0 +1,23 @@
+<h3>Form Demo</h3>
+<div [formGroup]="contactForm">
+  <div>
+    <label for="">Name</label>
+    <input formControlName="myName" type="text" placeholder="Enter Name" />
+  </div>
+  <div>
+    <label for="">Phone</label>
+    <input formControlName="phone" type="number" placeholder="Enter Phone" />
+  </div>
+  <div>
+    <label for="">Email</label>
+    <input formControlName="myEmail" type="email" placeholder="Enter Email" />
+  </div>
+  <div>
+    <label>Gender</label>
+    <input formControlName="gender" value="m" type="radio" name="g" />Male 
+    <input formControlName="gender" value="f" type="radio" name="g" />Female
+    <input formControlName="gender"  value="o" type="radio" name="g" />Other
+  </div>
+</div>
+
+<button (click)="submitData()">Submit Data</button>
