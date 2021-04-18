@@ -11,6 +11,12 @@ import { MypipePipe } from './mypipe.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { FormDemoComponent } from './form-demo/form-demo.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,12 +26,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     SiblingComponent,
     MypipePipe,
     HighlightDirective,
-    FormDemoComponent
+    FormDemoComponent,
+    HomeComponent,
+    ProductComponent,
+    ContactComponent,
+    AboutComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule // add reactive forms module in imports array
+    ReactiveFormsModule, // add reactive forms module in imports array
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

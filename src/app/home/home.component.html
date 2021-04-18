@@ -1,0 +1,5 @@
+<div *ngFor="let toDo of toDoList" (click)="getItemById(toDo.id)">
+
+    {{toDo.id}}. {{toDo.title}}
+
+</div>
