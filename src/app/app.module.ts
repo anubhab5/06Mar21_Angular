@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DiscountPipe } from './discount.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     ContactComponent,
     AboutComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    DiscountPipe
   ],
   imports: [
     BrowserModule,
